@@ -57,6 +57,8 @@
     <Compile Include="Assets\Scripts\BigDouble.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
     <Compile Include="Assets\Scripts\Data.cs" />
+    <Compile Include="Assets\Scripts\UpgradesManager.cs" />
+    <Compile Include="Assets\Scripts\Upgrades.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

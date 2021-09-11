@@ -9,10 +9,18 @@ public class Data
 
     public BigDouble clickUpgradeLevel;
 
+    public BigDouble prestigeUpgradeLevel;
+
+    public BigDouble prestigeMultiplier;
+
     public Data()
     {
         gamers = 0;
 
         clickUpgradeLevel = 0;
+
+        prestigeUpgradeLevel = 0;
+
+        prestigeMultiplier = 1;
     }
 }

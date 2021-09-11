@@ -13,13 +13,14 @@ public class Controller : MonoBehaviour
     [SerializeField] private TMP_Text gamersText;
     [SerializeField] private TMP_Text gamerClickPowerText;
 
-    public BigDouble ClickPower() => 1 + data.clickUpgradeLevel;
+    public BigDouble ClickPower() => (1 * data.prestigeMultiplier) + data.clickUpgradeLevel;
 
     private void Start()
     {
         data = new Data();
 
         UpgradesManager.instance.StartUpgradeManager();
+        PrestigeManager.instance.StartPrestigeManager();
     }
 
     private void Update()

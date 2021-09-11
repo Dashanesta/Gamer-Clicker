@@ -1615,7 +1615,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prestigeUpgrade: {fileID: 1907486799}
   prestigeUpgradeName: 
-  prestigeUpgradeMultiplierText: 
   prestigeUpgradeMultiplier:
     mantissa: 0
     exponent: 0
@@ -1733,7 +1732,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: test
+  m_text: 1.5x Gamers
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bcba8352cb5319e4db0127794d9d7eb7, type: 2}
   m_sharedMaterial: {fileID: -654547644479315844, guid: bcba8352cb5319e4db0127794d9d7eb7, type: 2}
@@ -1760,12 +1759,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 43.3
+  m_fontSize: 40
   m_fontSizeBase: 43.3
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 40
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512

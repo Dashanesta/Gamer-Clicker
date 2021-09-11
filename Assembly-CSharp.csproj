@@ -53,11 +53,11 @@
     <UnityVersion>2020.3.17f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\UpgradesManager.cs" />
     <Compile Include="Assets\Scripts\BigDoubleEditor.cs" />
     <Compile Include="Assets\Scripts\BigDouble.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
     <Compile Include="Assets\Scripts\Data.cs" />
-    <Compile Include="Assets\Scripts\UpgradesManager.cs" />
     <Compile Include="Assets\Scripts\Upgrades.cs" />
   </ItemGroup>
   <ItemGroup>

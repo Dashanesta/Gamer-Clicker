@@ -5,7 +5,9 @@ using BreakInfinity;
 
 public class Controller : MonoBehaviour
 {
-    public UpgradesManager upgradesManager;
+    public static Controller instance;
+    private void Awake() => instance = this;
+
     public Data data;
 
     [SerializeField] private TMP_Text gamersText;
@@ -17,7 +19,7 @@ public class Controller : MonoBehaviour
     {
         data = new Data();
 
-        upgradesManager.StartUpgradeManager();
+        UpgradesManager.instance.StartUpgradeManager();
     }
 
     private void Update()

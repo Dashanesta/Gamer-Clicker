@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
-using File = UnityEngine.Windows.File;
+using File = System.IO.File;
 
 public class SaveSystem : MonoBehaviour
 {

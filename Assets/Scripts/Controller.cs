@@ -15,7 +15,7 @@ public class Controller : MonoBehaviour
 
     public BigDouble ClickPower() => data.prestigeMultiplier * (1 + data.clickUpgradeLevel);
 
-    private const string dataFileName = "PlayerData_Gamer";
+    public const string dataFileName = "PlayerData_Gamer";
 
     private void Start()
     {
@@ -28,16 +28,24 @@ public class Controller : MonoBehaviour
     }
 
     public float SaveTime;
+
+    // Function to save the game publicly
+    public static void SaveGame()
+    {
+        SaveSystem.SaveData(Controller.instance.data, dataFileName);
+        Controller.instance.SaveTime = 0;
+    }
+
     private void Update()
     {
         gamerClickPowerText.text = "+" + ClickPower().ToString(format: "F2") + " Gamers";
         gamersText.text = data.gamers.ToString(format: "F1") + " Gamers";
 
+        // Autosaves game every 5 seconds
         SaveTime += Time.deltaTime * (1 / Time.timeScale);
         if (SaveTime >= 5)
         {
-            SaveSystem.SaveData(data, dataFileName);
-            SaveTime = 0;
+            SaveGame();
         }
     }
 

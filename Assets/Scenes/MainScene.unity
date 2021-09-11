@@ -740,8 +740,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dffc3145f24f2744a76de223bd96d6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data:
+    gamers:
+      mantissa: 0
+      exponent: 0
+    clickUpgradeLevel:
+      mantissa: 0
+      exponent: 0
+    prestigeUpgradeLevel:
+      mantissa: 0
+      exponent: 0
+    prestigeMultiplier:
+      mantissa: 1
+      exponent: 0
   gamersText: {fileID: 2087646930}
   gamerClickPowerText: {fileID: 264731982}
+  SaveTime: 0
 --- !u!1 &790931852
 GameObject:
   m_ObjectHideFlags: 0

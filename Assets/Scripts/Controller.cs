@@ -25,7 +25,7 @@ public class Controller : MonoBehaviour
     private void Update()
     {
         gamerClickPowerText.text = "+" + ClickPower() + " Gamers";
-        gamersText.text = data.gamers + " Gamers";
+        gamersText.text = data.gamers.ToString(format: "F1") + " Gamers";
     }
 
     public void GenerateGamers()

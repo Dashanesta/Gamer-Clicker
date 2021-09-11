@@ -18,7 +18,7 @@ public class UpgradesManager : MonoBehaviour
     {
         clickUpgradeName = "Gamers Per Click";
         clickUpgradeBaseCost = 10;
-        clickUpgradeCostMult = 1.5;
+        clickUpgradeCostMult = 1.33;
         UpdateClickUpgradeUI();
     }
 
@@ -26,7 +26,7 @@ public class UpgradesManager : MonoBehaviour
     {
         var data = Controller.instance.data;
         clickUpgrade.LevelText.text = data.clickUpgradeLevel.ToString();
-        clickUpgrade.CostText.text = "Cost: " + Cost().ToString(format:"F2") + " Gamers";
+        clickUpgrade.CostText.text = "Cost: " + Cost().ToString(format:"F1") + " Gamers";
         clickUpgrade.NameText.text = "+1 " + clickUpgradeName;
     }
 

@@ -17,7 +17,6 @@ public class UpgradesManager : MonoBehaviour
     public void StartUpgradeManager()
     {
         clickUpgradeName = "Gamers Per Click";
-        //clickUpgradeAmount = "+" + 
         clickUpgradeBaseCost = 10;
         clickUpgradeCostMult = 1.33;
         UpdateClickUpgradeUI();
@@ -28,7 +27,7 @@ public class UpgradesManager : MonoBehaviour
         var data = Controller.instance.data;
         clickUpgrade.LevelText.text = data.clickUpgradeLevel.ToString();
         clickUpgrade.CostText.text = "Cost: " + Cost().ToString(format:"F0") + " Gamers";
-        clickUpgrade.NameText.text = "+1 " + clickUpgradeName;
+        clickUpgrade.NameText.text = "+" + data.prestigeMultiplier + " " + clickUpgradeName;
     }
 
     public BigDouble Cost() => clickUpgradeBaseCost* BigDouble.Pow(clickUpgradeCostMult, Controller.instance.data.clickUpgradeLevel);

@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using BreakInfinity;
+using JetBrains.Annotations;
 
 
 public class Controller : MonoBehaviour
@@ -12,7 +13,6 @@ public class Controller : MonoBehaviour
 
     [SerializeField] private TMP_Text gamersText;
     [SerializeField] private TMP_Text gamerClickPowerText;
-
     public BigDouble ClickPower() => data.prestigeMultiplier * (1 + data.clickUpgradeLevel);
 
     public const string dataFileName = "PlayerData_Gamer";
@@ -33,27 +33,11 @@ public class Controller : MonoBehaviour
         ClickUpgradesManager.instance.StartUpgradeManager();
         PrestigeManager.instance.StartPrestigeManager();
     }
-    
-    public float SaveTime;
-
-    // Function to save the game publicly
-    public static void SaveGame()
-    {
-        SaveSystem.SaveData(Controller.instance.data, dataFileName);
-        Controller.instance.SaveTime = 0;
-    }
 
     private void Update()
     {
         gamerClickPowerText.text = "+" + ClickPower().ToString(format: "F0") + " Gamers";
         gamersText.text = data.gamers.ToString(format: "F1") + " Gamers";
-
-        // Autosaves game every 5 seconds
-        SaveTime += Time.deltaTime * (1 / Time.timeScale);
-        if (SaveTime >= 5)
-        {
-            SaveGame();
-        }
     }
 
     public void GenerateGamers()

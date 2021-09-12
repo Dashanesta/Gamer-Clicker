@@ -11,6 +11,8 @@ public class Data
 
     public BigDouble clickUpgradeLevel;
 
+    public BigDouble autoClickerUpgradeLevel;
+
     public BigDouble prestigeUpgradeLevel;
 
     public BigDouble prestigeMultiplier;
@@ -20,6 +22,8 @@ public class Data
         gamers = 0;
 
         clickUpgradeLevel = 0;
+
+        autoClickerUpgradeLevel = 0;
 
         prestigeUpgradeLevel = 0;
 

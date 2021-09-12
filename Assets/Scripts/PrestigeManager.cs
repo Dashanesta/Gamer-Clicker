@@ -43,8 +43,7 @@ public class PrestigeManager : MonoBehaviour
             data.prestigeUpgradeLevel += 1;
             data.prestigeMultiplier = data.prestigeMultiplier * 2;
         }
-
-        UpdatePrestigeUpgradeUI();
-        ClickUpgradesManager.instance.UpdateClickUpgradeUI();
+        
+        Controller.UpdateUI();
     }
 }

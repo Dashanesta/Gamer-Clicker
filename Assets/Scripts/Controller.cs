@@ -17,6 +17,12 @@ public class Controller : MonoBehaviour
 
     public const string dataFileName = "PlayerData_Gamer";
 
+    public static void UpdateUI()
+    {
+        ClickUpgradesManager.instance.UpdateClickUpgradeUI();
+        AutoClickerManager.instance.UpdateUpgradeUI();
+        PrestigeManager.instance.UpdatePrestigeUpgradeUI();
+    }
     private void Start()
     {
         data = SaveSystem.SaveExists(dataFileName)
@@ -24,6 +30,7 @@ public class Controller : MonoBehaviour
             : new Data();
 
         ClickUpgradesManager.instance.StartUpgradeManager();
+        AutoClickerManager.instance.StartUpgradeManager();
         PrestigeManager.instance.StartPrestigeManager();
     }
     

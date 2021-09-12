@@ -747,6 +747,9 @@ MonoBehaviour:
     clickUpgradeLevel:
       mantissa: 0
       exponent: 0
+    autoClickerUpgradeLevel:
+      mantissa: 0
+      exponent: 0
     prestigeUpgradeLevel:
       mantissa: 0
       exponent: 0
@@ -1961,7 +1964,7 @@ GameObject:
   - component: {fileID: 1471495757}
   - component: {fileID: 1471495756}
   m_Layer: 0
-  m_Name: UpgradesManager
+  m_Name: ClickUpgradesManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

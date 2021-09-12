@@ -20,7 +20,8 @@ public class Controller : MonoBehaviour
     public static void UpdateUI()
     {
         ClickUpgradesManager.instance.UpdateClickUpgradeUI();
-        AutoClickerManager.instance.UpdateUpgradeUI();
+        // Cannot get object cause its in other scene
+        // AutoClickerManager.instance.UpdateUpgradeUI();
         PrestigeManager.instance.UpdatePrestigeUpgradeUI();
     }
     private void Start()
@@ -30,7 +31,6 @@ public class Controller : MonoBehaviour
             : new Data();
 
         ClickUpgradesManager.instance.StartUpgradeManager();
-        AutoClickerManager.instance.StartUpgradeManager();
         PrestigeManager.instance.StartPrestigeManager();
     }
     

@@ -9,6 +9,11 @@ public class SceneChanger : MonoBehaviour
     {
         Controller.SaveGame();
         SceneManager.LoadScene("ShopScene");
+        
     }
-    public void ReturnHome() => SceneManager.LoadScene("MainScene");
+    public void ReturnHome()
+    {
+        Controller.SaveGame();
+        SceneManager.LoadScene("MainScene");
+    }
 }

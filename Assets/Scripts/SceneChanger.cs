@@ -9,7 +9,7 @@ public class SceneChanger : MonoBehaviour
     {
         Controller.SaveGame();
         SceneManager.LoadScene("ShopScene");
-        
+        //AutoClickerManager.instance.StartUpgradeManager();
     }
     public void ReturnHome()
     {

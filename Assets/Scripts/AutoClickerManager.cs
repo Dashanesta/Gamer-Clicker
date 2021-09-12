@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using BreakInfinity;
@@ -11,8 +12,7 @@ public class AutoClickerManager : MonoBehaviour
     
     public BigDouble UpgradeBaseCost;
     public BigDouble UpgradeCostMult;
-    
-    public void StartUpgradeManager()
+    private void Start()
     {
         UpgradeBaseCost = 10;
         UpgradeCostMult = 1.33;

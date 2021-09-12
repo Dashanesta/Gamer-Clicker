@@ -18,17 +18,17 @@ public class PrestigeManager : MonoBehaviour
     {
         var data = Controller.instance.data;
         prestigeUpgradeName = "Gamers";
-        prestigeUpgradeBaseCost = 1000;
-        prestigeUpgradeCostMult = 1.33;
+        prestigeUpgradeBaseCost = 100000;
+        prestigeUpgradeCostMult = 1.75;
         UpdatePrestigeUpgradeUI();
     }
     public void UpdatePrestigeUpgradeUI()
     {
         var data = Controller.instance.data;
-        prestigeUpgradeMultiplier = data.prestigeMultiplier * 1.5;
+        prestigeUpgradeMultiplier = data.prestigeMultiplier * 2;
         prestigeUpgrade.PrestigeLevelText.text = data.prestigeUpgradeLevel.ToString();
         prestigeUpgrade.CostText.text = "Cost: " + PrestigeCost().ToString(format: "F0") + " Gamers";
-        prestigeUpgrade.PrestigeText.text = prestigeUpgradeMultiplier.ToString(format: "F2") + "x " + prestigeUpgradeName;
+        prestigeUpgrade.PrestigeText.text = prestigeUpgradeMultiplier.ToString(format: "F0") + "x " + prestigeUpgradeName;
     }
 
     public BigDouble PrestigeCost() => prestigeUpgradeBaseCost * BigDouble.Pow(prestigeUpgradeCostMult, Controller.instance.data.prestigeUpgradeLevel);
@@ -41,10 +41,10 @@ public class PrestigeManager : MonoBehaviour
             data.gamers = 0;
             data.clickUpgradeLevel = 0;
             data.prestigeUpgradeLevel += 1;
-            data.prestigeMultiplier = data.prestigeMultiplier * 1.5;
+            data.prestigeMultiplier = data.prestigeMultiplier * 2;
         }
 
         UpdatePrestigeUpgradeUI();
-        UpgradesManager.instance.UpdateClickUpgradeUI();
+        ClickUpgradesManager.instance.UpdateClickUpgradeUI();
     }
 }

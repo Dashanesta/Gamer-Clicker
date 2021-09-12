@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using BreakInfinity;
 using UnityEngine;
 
-public class UpgradesManager : MonoBehaviour
+public class ClickUpgradesManager : MonoBehaviour
 {
-    public static UpgradesManager instance;
+    public static ClickUpgradesManager instance;
     private void Awake() => instance = this;
-    public Upgrades clickUpgrade;
+    public ClickUpgrades clickUpgrade;
 
     public string clickUpgradeName;
 

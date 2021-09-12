@@ -23,10 +23,10 @@ public class Controller : MonoBehaviour
             ? SaveSystem.LoadData<Data>(dataFileName)
             : new Data();
 
-        UpgradesManager.instance.StartUpgradeManager();
+        ClickUpgradesManager.instance.StartUpgradeManager();
         PrestigeManager.instance.StartPrestigeManager();
     }
-
+    
     public float SaveTime;
 
     // Function to save the game publicly
@@ -38,7 +38,7 @@ public class Controller : MonoBehaviour
 
     private void Update()
     {
-        gamerClickPowerText.text = "+" + ClickPower().ToString(format: "F2") + " Gamers";
+        gamerClickPowerText.text = "+" + ClickPower().ToString(format: "F0") + " Gamers";
         gamersText.text = data.gamers.ToString(format: "F1") + " Gamers";
 
         // Autosaves game every 5 seconds

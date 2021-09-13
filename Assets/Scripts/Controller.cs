@@ -13,6 +13,7 @@ public class Controller : MonoBehaviour
 
     [SerializeField] private TMP_Text gamersText;
     [SerializeField] private TMP_Text gamerClickPowerText;
+    [SerializeField] private TMP_Text gamerPerSecondText;
     public BigDouble ClickPower() => data.prestigeMultiplier * (1 + data.clickUpgradeLevel);
 
     public const string dataFileName = "PlayerData_Gamer";
@@ -38,6 +39,7 @@ public class Controller : MonoBehaviour
     {
         gamerClickPowerText.text = "+" + ClickPower().ToString(format: "F0") + " Gamers";
         gamersText.text = data.gamers.ToString(format: "F1") + " Gamers";
+        gamerPerSecondText.text = "+" + data.autoClickerUpgradeLevel.ToString() + " Per Second";
     }
 
     public void GenerateGamers()

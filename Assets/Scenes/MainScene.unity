@@ -758,7 +758,6 @@ MonoBehaviour:
       exponent: 0
   gamersText: {fileID: 2087646930}
   gamerClickPowerText: {fileID: 264731982}
-  SaveTime: 0
 --- !u!1 &790931852
 GameObject:
   m_ObjectHideFlags: 0
@@ -2316,6 +2315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2cda2b8577f3ee4995a6453184876e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SaveTime: 0
 --- !u!1 &1876410793
 GameObject:
   m_ObjectHideFlags: 0

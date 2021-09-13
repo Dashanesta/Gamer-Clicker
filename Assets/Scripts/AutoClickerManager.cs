@@ -18,7 +18,21 @@ public class AutoClickerManager : MonoBehaviour
         UpgradeCostMult = 1.33;
         UpdateUpgradeUI();
     }
+
+    public float AutoClickerTimer;
     
+    private void Update()
+    {
+        // Auto Clicker Implementation
+        AutoClickerTimer += Time.deltaTime * (1 / Time.timeScale);
+        var data = Controller.instance.data;
+        if (AutoClickerTimer >= 1)
+        {
+            data.gamers += data.autoClickerUpgradeLevel;
+            AutoClickerTimer = 0;
+        }
+    }
+
     public void UpdateUpgradeUI()
     {
         var data = Controller.instance.data;

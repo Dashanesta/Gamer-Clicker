@@ -7,13 +7,11 @@ public class SceneChanger : MonoBehaviour
 {
     public void ShopScene()
     {
-        SaveTimer.SaveGame();
         SceneManager.LoadScene("ShopScene");
         //AutoClickerManager.instance.StartUpgradeManager();
     }
     public void ReturnHome()
     {
-        SaveTimer.SaveGame();
         SceneManager.LoadScene("MainScene");
     }
 }

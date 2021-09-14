@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using TMPro;
 using BreakInfinity;
@@ -45,5 +46,10 @@ public class Controller : MonoBehaviour
     public void GenerateGamers()
     {
         data.gamers += ClickPower();
+    }
+
+    private void OnDestroy()
+    {
+        SaveTimer.SaveGame();
     }
 }
